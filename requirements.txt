@@ -10,5 +10,5 @@ adafruit-circuitpython-miniqr
 adafruit-circuitpython-requests
 adafruit-circuitpython-portalbase
 adafruit-circuitpython-pca9554
-adafruit-circuitpython-cst8xxx
+adafruit-circuitpython-cst8xx
 adafruit-circuitpython-focaltouch
