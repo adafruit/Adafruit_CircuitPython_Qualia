@@ -53,11 +53,9 @@ class DotClockDisplay:
             i2c, self._init_sequence, **tft_io_expander
         )
         i2c.deinit()
-
-        tft_pins = dict(board.TFT_PINS)
-        framebuffer = dotclockframebuffer.DotClockFramebuffer(
-            **tft_pins, **self._timings
-        )
+        params = dict(board.TFT_PINS)
+        params.update(self._timings)
+        framebuffer = dotclockframebuffer.DotClockFramebuffer(**params)
         self.display = FramebufferDisplay(framebuffer, auto_refresh=auto_refresh)
 
     def init_touch(self):
