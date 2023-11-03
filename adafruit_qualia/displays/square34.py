@@ -18,9 +18,9 @@ Implementation Notes
 **Hardware:**
 
 * `Square RGB 666 TTL TFT Display - 3.4" 480x480 with Touchscreen
-   <https://www.adafruit.com/product/5808>`_
+  <https://www.adafruit.com/product/5808>`_
 * `Square RGB 666 TTL TFT Display - 3.4" 480x480 No Touchscreen
-   <https://www.adafruit.com/product/5825>`_
+  <https://www.adafruit.com/product/5825>`_
 
 """
 

@@ -18,9 +18,9 @@ Implementation Notes
 **Hardware:**
 
 * `Square RGB TTL TFT Display - 4" 720x720 - with Capacitive Touch
-   <https://www.adafruit.com/product/5794>`_
+  <https://www.adafruit.com/product/5794>`_
 * `Square RGB 666 TTL TFT Display - 4" 720x720 - No Touchscreen
-   <https://www.adafruit.com/product/5795>`_
+  <https://www.adafruit.com/product/5795>`_
 
 """
 

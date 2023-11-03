@@ -18,7 +18,7 @@ Implementation Notes
 **Hardware:**
 
 * `Round RGB TTL TFT Display - 4" 720x720 - NV3052C
-   <https://www.adafruit.com/product/5793>`_
+  <https://www.adafruit.com/product/5793>`_
 
 """
 

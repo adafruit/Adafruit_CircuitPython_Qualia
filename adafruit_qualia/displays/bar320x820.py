@@ -18,9 +18,9 @@ Implementation Notes
 **Hardware:**
 
 * `Rectangle Bar RGB TTL TFT Display - 3.2" 320x820 with Cap Touch
-   <https://www.adafruit.com/product/5797>`_
+  <https://www.adafruit.com/product/5797>`_
 * `Rectangle RGB TTL TFT Display - 3.2" 320x820 No Touchscreen
-   <https://www.adafruit.com/product/5828>`_
+  <https://www.adafruit.com/product/5828>`_
 
 """
 

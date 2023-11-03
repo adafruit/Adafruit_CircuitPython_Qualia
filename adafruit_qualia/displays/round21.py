@@ -18,9 +18,9 @@ Implementation Notes
 **Hardware:**
 
 * `Round RGB 666 TTL TFT Display - 2.1" 480x480 - Capacitive Touch
-   <https://www.adafruit.com/product/5792>`_
+  <https://www.adafruit.com/product/5792>`_
 * `Round RGB TTL TFT Display - 2.1" 480x480 - No Touchscreen
-   <https://www.adafruit.com/product/5806>`_
+  <https://www.adafruit.com/product/5806>`_
 
 """
 
