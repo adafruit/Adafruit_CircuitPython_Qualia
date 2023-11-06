@@ -9,7 +9,7 @@ from adafruit_qualia.graphics import Graphics, Displays
 # For other displays:
 # 2.1" Round = Displays.ROUND21
 # 3.4" Square = Displays.SQUARE34
-# 320 x 820 Bar - Displays.BAR320x820
+# 320 x 820 Bar - Displays.BAR320X820
 graphics = Graphics(Displays.SQUARE40, default_bg=None, auto_refresh=False)
 
 if graphics.touch is None:
