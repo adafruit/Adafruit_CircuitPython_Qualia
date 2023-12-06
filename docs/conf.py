@@ -35,6 +35,7 @@ autodoc_mock_imports = [
     "wifi",
     "socketpool",
     "bitmaptools",
+    "espidf",
 ]
 autodoc_preserve_defaults = True
 
