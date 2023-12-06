@@ -16,6 +16,7 @@ DotClock Display Base Class
 import time
 import busio
 import board
+import espidf
 import dotclockframebuffer
 from framebufferio import FramebufferDisplay
 from displayio import release_displays
@@ -55,7 +56,13 @@ class DotClockDisplay:
         i2c.deinit()
         params = dict(board.TFT_PINS)
         params.update(self._timings)
-        framebuffer = dotclockframebuffer.DotClockFramebuffer(**params)
+        try:
+            framebuffer = dotclockframebuffer.DotClockFramebuffer(**params)
+        except espidf.IDFError as exc:
+            raise RuntimeError(
+                "Display dimension error. "
+                "Make sure you are running the absolute latest version of CircuitPython."
+            ) from exc
         self.display = FramebufferDisplay(framebuffer, auto_refresh=auto_refresh)
 
     def init_touch(self):
