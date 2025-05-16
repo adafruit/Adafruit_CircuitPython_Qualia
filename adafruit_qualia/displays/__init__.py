@@ -13,15 +13,17 @@ DotClock Display Base Class
 * Author(s): Melissa LeBlanc-Williams
 
 """
+
 import time
-import busio
+
 import board
-import espidf
+import busio
 import dotclockframebuffer
-from framebufferio import FramebufferDisplay
-from displayio import release_displays
-from adafruit_focaltouch import Adafruit_FocalTouch
+import espidf
 from adafruit_cst8xx import Adafruit_CST8XX
+from adafruit_focaltouch import Adafruit_FocalTouch
+from displayio import release_displays
+from framebufferio import FramebufferDisplay
 
 TOUCH_FOCALTOUCH = Adafruit_FocalTouch
 TOUCH_CST826 = Adafruit_CST8XX
@@ -35,7 +37,7 @@ class DotClockDisplay:
     def __init__(self):
         release_displays()
         board.I2C().deinit()
-        self._init_sequence = bytes()
+        self._init_sequence = b""
         self._timings = {}
         self._bus_frequency = 100_000
         self._touch_driver = TOUCH_FOCALTOUCH

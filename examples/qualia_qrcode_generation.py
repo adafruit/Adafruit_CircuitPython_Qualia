@@ -10,7 +10,8 @@ This example shows a web address QR on the display
 """
 
 import time
-from adafruit_qualia.graphics import Graphics, Displays
+
+from adafruit_qualia.graphics import Displays, Graphics
 from adafruit_qualia.peripherals import Peripherals
 
 # Background Information

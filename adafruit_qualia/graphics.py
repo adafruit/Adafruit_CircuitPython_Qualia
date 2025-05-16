@@ -28,6 +28,7 @@ Implementation Notes
 """
 
 import os
+
 from adafruit_portalbase.graphics import GraphicsBase
 
 __version__ = "0.0.0+auto.0"
@@ -44,9 +45,7 @@ class Displays:
         display_folder = "/".join(display_folder) + "/displays"
         displays = os.listdir(display_folder)
         Displays._valid_displays = [
-            x.split(".")[0]
-            for x in displays
-            if not (x.startswith("_")) and not (x.startswith("."))
+            x.split(".")[0] for x in displays if not (x.startswith("_")) and not (x.startswith("."))
         ]
         for display in Displays._valid_displays:
             setattr(Displays, display.upper(), display)
@@ -81,7 +80,7 @@ class Graphics(GraphicsBase):
         default_bg: int = 0,
         rotation: int = 0,
         scale: int = 1,
-        debug: bool = False
+        debug: bool = False,
     ) -> None:
         self._dotclock_display = None
         self.init_display(display_type, auto_refresh=auto_refresh)
@@ -108,7 +107,7 @@ class Graphics(GraphicsBase):
                 "Use Displays.valid_displays() to get a list of valid displays."
             )
 
-        parent_class = self.__module__.split(".")[0]  # pylint: disable=use-maxsplit-arg
+        parent_class = self.__module__.split(".")[0]
         class_path = (parent_class, "displays", display_type.lower())
 
         display_class = __import__(".".join(class_path))

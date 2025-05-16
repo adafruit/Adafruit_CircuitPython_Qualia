@@ -3,8 +3,10 @@
 """
 Simple painting demo that works with on any touch display
 """
+
 import displayio
-from adafruit_qualia.graphics import Graphics, Displays
+
+from adafruit_qualia.graphics import Displays, Graphics
 
 # For other displays:
 # 2.1" Round = Displays.ROUND21
@@ -39,9 +41,7 @@ current_color = displayio.ColorConverter().convert(0xFFFFFF)
 
 for i in range(palette_width):
     color_index = i * 255 // palette_width
-    rgb565 = displayio.ColorConverter().convert(
-        color_index | color_index << 8 | color_index << 16
-    )
+    rgb565 = displayio.ColorConverter().convert(color_index | color_index << 8 | color_index << 16)
     r_mask = 0xF800
     g_mask = 0x07E0
     b_mask = 0x001F
@@ -62,10 +62,7 @@ while True:
             for touch in graphics.touch.touches:
                 x = touch["x"]
                 y = touch["y"]
-                if (
-                    not 0 <= x < graphics.display.width
-                    or not 0 <= y < graphics.display.height
-                ):
+                if not 0 <= x < graphics.display.width or not 0 <= y < graphics.display.height:
                     continue  # Skip out of bounds touches
                 if x < palette_width:
                     current_color = bitmap[x, y]

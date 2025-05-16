@@ -30,10 +30,10 @@ Implementation Notes
 
 """
 
+import adafruit_pca9554
 import board
 import busio
 from digitalio import Pull
-import adafruit_pca9554
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_Qualia.git"
