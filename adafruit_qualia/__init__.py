@@ -28,13 +28,15 @@ Implementation Notes
 """
 
 import gc
+
 from adafruit_portalbase import PortalBase
-from .network import Network
+
 from .graphics import Graphics
+from .network import Network
 from .peripherals import Peripherals
 
 try:
-    from typing import Optional, Dict, Union, Callable, Sequence, List
+    from typing import Callable, Dict, List, Optional, Sequence, Union
 except ImportError:
     pass
 
@@ -67,7 +69,6 @@ class Qualia(PortalBase):
 
     """
 
-    # pylint: disable=too-few-public-methods
     def __init__(
         self,
         display_type: str,
@@ -81,7 +82,7 @@ class Qualia(PortalBase):
         rotation: int = 0,
         scale: int = 1,
         debug: bool = False,
-        use_network: bool = True
+        use_network: bool = True,
     ) -> None:
         if use_network:
             network = Network(

@@ -24,7 +24,7 @@ Implementation Notes
 
 """
 
-from . import DotClockDisplay, TOUCH_CST826
+from . import TOUCH_CST826, DotClockDisplay
 
 
 class Round21(DotClockDisplay):

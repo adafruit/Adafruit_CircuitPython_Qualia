@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 import time
+
 from adafruit_qualia import Qualia
 from adafruit_qualia.graphics import Displays
 
