@@ -102,7 +102,6 @@ class Network(NetworkBase):
 
         return self._mqtt_client
 
-
     def _get_mqtt_client(self) -> Union[MQTT.MQTT, IO_MQTT]:
         if self._mqtt_client is not None:
             return self._mqtt_client
