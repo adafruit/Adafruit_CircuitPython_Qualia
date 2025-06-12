@@ -32,10 +32,10 @@ tile_grid = displayio.TileGrid(
 )
 
 # Add the TileGrid to the Group
-graphics.splash.append(tile_grid)
+graphics.root_group.append(tile_grid)
 
 # Add the Group to the Display
-graphics.display.root_group = graphics.splash
+graphics.display.root_group = graphics.root_group
 
 current_color = displayio.ColorConverter().convert(0xFFFFFF)
 
