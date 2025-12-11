@@ -45,11 +45,11 @@ class Touch:
         if self._rotation == 0:
             return x, y
         elif self._rotation == 90:
-            return y, self._height - x
+            return y, self._width - x
         elif self._rotation == 180:
             return self._width - x, self._height - y
         elif self._rotation == 270:
-            return self._width - y, x
+            return self._height - y, x
         else:
             raise ValueError("Rotation must be 0, 90, 180, or 270")
 
@@ -170,9 +170,10 @@ class DotClockDisplay:
         """Set the display rotation"""
         if value not in {0, 90, 180, 270}:
             raise ValueError("Rotation must be 0, 90, 180, or 270")
-        self._touch.rotation = value
+        if self._touch:
+            self._touch.rotation = value
         # Update the display rotation if already initialized
-        if self.display is not None:
+        if self.display:
             self.display.rotation = value
 
     @property

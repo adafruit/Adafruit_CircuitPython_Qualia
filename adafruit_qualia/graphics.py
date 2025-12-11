@@ -67,7 +67,7 @@ class Graphics(GraphicsBase):
     :param auto_refresh: Set to False to disable auto refresh. Defaults to True.
     :param default_bg: The path to your default background image file or a hex color.
                        Defaults to 0x000000.
-    :param rotation: Default rotation is landscape (270) but can be 0, 90, 180 for portrait/rotated
+    :param rotation: Default rotation is portrait (0) but can be 90, 180, 270 for landscape/rotated
     :param debug: Turn on debug print outs. Defaults to False.
 
     """
