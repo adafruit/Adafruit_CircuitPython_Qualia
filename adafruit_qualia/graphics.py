@@ -77,7 +77,7 @@ class Graphics(GraphicsBase):
         display_type: str,
         *,
         auto_refresh: bool = True,
-        default_bg: int = 0,
+        default_bg: None | int = 0,
         rotation: int = 0,
         scale: int = 1,
         debug: bool = False,
